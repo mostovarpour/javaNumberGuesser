@@ -15,6 +15,6 @@ class client{
             input = dataIn.readLine();
             System.out.println(input);
         }
-        clientSocket.close();
+        //clientSocket.close();
     }
 }
