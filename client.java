@@ -8,12 +8,15 @@ class client{
     public static void main(String argv[]) throws Exception{
         int counter       = 10;
         String input;
+        String output;
         Socket clientSocket = new Socket("localhost", port);
         DataOutputStream dataOut = new DataOutputStream(clientSocket.getOutputStream());
         BufferedReader dataIn = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         while(counter > 0){
             input = dataIn.readLine();
             System.out.println(input);
+            //dataOut.writeBytes(input);
+            //counter--;
         }
         //clientSocket.close();
     }
